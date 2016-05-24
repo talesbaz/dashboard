@@ -1,0 +1,4 @@
+[18-May-2016 21:47:30 America/Sao_Paulo] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/sportabil/public_html/dashboard_v2/index.php on line 2
+[18-May-2016 21:48:05 America/Sao_Paulo] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/sportabil/public_html/dashboard_v2/index.php on line 2
+[18-May-2016 23:44:01 America/Sao_Paulo] PHP Warning:  include_once(js/plugins/chartist-js/chartist.min.js.map.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/sportabil/public_html/dashboard_v2/index.php on line 188
+[18-May-2016 23:44:01 America/Sao_Paulo] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'js/plugins/chartist-js/chartist.min.js.map.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/sportabil/public_html/dashboard_v2/index.php on line 188
