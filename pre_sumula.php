@@ -25,7 +25,7 @@
   <div class="section">
 
     <div class="row">
-      <div class="col s3 center-align" style="padding-top: 19px;"><img src="images/internacional.png" width="95" height="95" /><h6>Sport Club Internacional</h6>
+      <div class="col s3 center-align" style="padding-top: 19px;"><img src="images/internacional.png" width="75" height="75" /><h6>Sport Club Internacional</h6>
         <p><a class="waves-effect waves-light red darken-4 btn modal-trigger" href="#plantel_home">Plantel</a></p>
         <div id="plantel_home" class="modal bottom-sheet" style="z-index: 1003; display: block; opacity: 0; bottom: -100%;">
             <div class="modal-content">
