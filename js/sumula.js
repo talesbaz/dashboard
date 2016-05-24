@@ -112,7 +112,7 @@ function carregaAtletas(clube, local){
 
 		if( clube == 'internacional'){
 
-			$.each(oJson.internacional, function( iIndex, oAtleta ){
+			$.each(oJson.internacional.sort(sortByProperty('nome')), function( iIndex, oAtleta ){
 
 		    	oSelectAtleta.append( "<option>" + oAtleta.nome + "</option>" );
 
@@ -144,7 +144,7 @@ function carregaAtletas(clube, local){
 			lBuildPlantel = false;
 		}else{ // :/
 
-			$.each(oJson.gremio, function( iIndex, oAtleta ){
+			$.each(oJson.gremio.sort(sortByProperty('nome')), function( iIndex, oAtleta ){
 
 		    	oSelectAtleta.append( "<option>" + oAtleta.nome + "</option>" );
 
@@ -210,3 +210,12 @@ function carregaAtletas(clube, local){
 
 carregaAtletas('internacional', 'home');
 carregaAtletas('gremio', 'away'); //padrao salvatore
+
+/**
+ * sortByProperty
+ */
+function sortByProperty (property) {
+    return function (x, y) {
+        return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
+    };
+};
