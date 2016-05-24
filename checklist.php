@@ -44,36 +44,72 @@
               <label for="task5">Condições do Estádio <a href="#" class="secondary-content"><span class="ultra-small"></span></a>
               </label>
               <span class="task-cat green">Segurança</span>
+              <div class="row section" style="padding-left: 31px;">
+                <div class="input-field col s12">
+                   <input id="input_text"  type="text" length="100">
+                   <label for="input_text">Observação</label>
+                </div>
+              </div>
           </li>
           <li class="collection-item dismissable">
               <input type="checkbox" id="task9" />
               <label for="task9">Policiamento <a href="#" class="secondary-content"><span class="ultra-small"></span></a>
               </label>
               <span class="task-cat green">Segurança</span>
+              <div class="row section" style="padding-left: 31px;">
+                <div class="input-field col s12">
+                   <input id="input_text"  type="text" length="100">
+                   <label for="input_text">Observação</label>
+                </div>
+              </div>
           </li>
           <li class="collection-item dismissable">
               <input type="checkbox" id="task7" />
               <label for="task7">Acessos dos árbitros ao campo <a href="#" class="secondary-content"><span class="ultra-small"></span></a>
               </label>
               <span class="task-cat purple">Acessibilidade</span>
+              <div class="row section" style="padding-left: 31px;">
+                <div class="input-field col s12">
+                   <input id="input_text"  type="text" length="100">
+                   <label for="input_text">Observação</label>
+                </div>
+              </div>
           </li>
           <li class="collection-item dismissable">
               <input type="checkbox" id="task1" />
               <label for="task1">Ambulancia<a href="#" class="secondary-content"><span class="ultra-small"></span></a>
               </label>
               <span class="task-cat pink">Segurança/Saúde</span>
+              <div class="row section" style="padding-left: 31px;">
+                <div class="input-field col s12">
+                   <input id="input_text"  type="text" length="100">
+                   <label for="input_text">Observação</label>
+                </div>
+              </div>
           </li>
           <li class="collection-item dismissable">
               <input type="checkbox" id="task2" />
               <label for="task2">Acessos dos torcedores ao estádio. <a href="#" class="secondary-content"><span class="ultra-small"></span></a>
               </label>
               <span class="task-cat purple">Acessibilidade</span>
+              <div class="row section" style="padding-left: 31px;">
+                <div class="input-field col s12">
+                   <input id="input_text"  type="text" length="100">
+                   <label for="input_text">Observação</label>
+                </div>
+              </div>
           </li>
           <li class="collection-item dismissable">
               <input type="checkbox" id="task6" />
               <label for="task6">Bombeiros <a href="#" class="secondary-content"><span class="ultra-small"></span></a>
               </label>
               <span class="task-cat green">Segurança</span>
+              <div class="row section" style="padding-left: 31px;">
+                <div class="input-field col s12">
+                   <input id="input_text"  type="text" length="100">
+                   <label for="input_text">Observação</label>
+                </div>
+              </div>
           </li>
       </ul>
 
