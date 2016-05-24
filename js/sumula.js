@@ -1,5 +1,20 @@
 function adicionarEvento( local, tipo ){
 
+	var sJsonAtletas = localStorage.getItem("json_jogadores");
+	oJsonAtletas     = JSON.parse(sJsonAtletas);
+
+	aAtletasHome = [];
+	aAtletasAway = [];
+	$.each(oJsonAtletas, function( iIndex, oAtleta){
+
+		if(oAtleta.local == 'home'){
+			aAtletasHome.push(oAtleta);
+		}
+		if(oAtleta.local == 'away'){
+			aAtletasAway.push(oAtleta);
+		}
+	});
+
 	rowAtletaEventoSize 	  = 's5';
 	rowAtletaEventoMinutoSize = 's7';
 
@@ -19,10 +34,16 @@ function adicionarEvento( local, tipo ){
 	var oRowAtleta = $("<div></div>");
 	oRowAtleta.attr("class", "input-field col " + rowAtletaEventoSize);
 
-	var oSelectAtleta = $("<select></select>");
+	var iIdentificador = Math.random();
+	var oSelectAtleta  = $("<select></select>");
 	oSelectAtleta.append( "<option disabled selected>Atleta</option>" );
-	oSelectAtleta.append( "<option>Vitinho</option>" );
-	oSelectAtleta.append( "<option>Sasha</option>" );
+	var aOptionsAtleta = aAtletasHome;
+	if( local == 'away'){
+		aOptionsAtleta = aAtletasAway;
+	}
+	$.each(aOptionsAtleta, function( iIndex, oAtleta ){
+    	oSelectAtleta.append( "<option>" + oAtleta.nome + "</option>" );
+    });
 
 	oRowAtleta.append(oSelectAtleta);
 	oRow.append(oRowAtleta);
