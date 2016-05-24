@@ -12,7 +12,7 @@
         <ol class="breadcrumbs">
             <li><a href="index.php">Início</a></li>
             <li><a href="#">Atividades</a></li>
-            <li class="#">Pré-Sumula da Partida</li>
+            <li><a href="#">Pré-Sumula da Partida</a></li>
             <li class="active">Finaliza Sumula da Partida</li>
         </ol>
       </div>
