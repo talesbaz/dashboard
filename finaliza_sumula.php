@@ -65,40 +65,49 @@
           <form name="atletas_home">
             <div class="card-panel">
 
-                <ul class="collection with-header" id="gols_home">
-                    <li class="collection-header"><h4>Gols <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('home', 'gol');"><i class="mdi-content-add"></i></a></h4></li>
-                </ul>
+                <div class="section">
+                  <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('home', 'gol');"><i class="mdi-content-add"></i></a>
+                  <h4 class="header3" id="gols_home">Gols</h4>
+                </div>
+                <div class="divider"></div>
 
-                <ul class="collection with-header" id="amarelos_home">
-                    <li class="collection-header"><h4>Cartões Amarelos <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('home', 'amarelo');"><i class="mdi-content-add"></i></a></h4></li>
-                </ul>
+                <div class="section">
+                  <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('home', 'amarelo');"><i class="mdi-content-add"></i></a>
+                  <h4 class="header3" id="amarelos_home">Cartões Amarelos</h4>
+                </div>
+                <div class="divider"></div>
 
-                <ul class="collection with-header" id="vermelhos_home">
-                    <li class="collection-header"><h4>Cartões Vermelhos <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('home', 'vermelho');"><i class="mdi-content-add"></i></a></h4></li>
-                </ul>
+                <div class="section">
+                  <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('home', 'vermelho');"><i class="mdi-content-add"></i></a>
+                  <h4 class="header3" id="vermelhos_home">Cartões Vermelhos</h4>
+                </div>
 
             </div>
           </form>
 
         </div>
 
-
           <div class="col s12 m12 l6">
 
             <form name="atletas_away">
               <div class="card-panel">
 
-                  <ul class="collection with-header" id="gols_away">
-                      <li class="collection-header"><h4>Gols <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('away', 'gol');"><i class="mdi-content-add"></i></a></h4></li>
-                  </ul>
+                <div class="section">
+                  <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('away', 'gol');"><i class="mdi-content-add"></i></a>
+                  <h4 class="header3" id="gols_away">Gols</h4>
+                </div>
+                <div class="divider"></div>
 
-                  <ul class="collection with-header" id="amarelos_away">
-                      <li class="collection-header"><h4>Cartões Amarelos <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('away', 'amarelo');"><i class="mdi-content-add"></i></a></h4></li>
-                  </ul>
+                <div class="section">
+                  <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('away', 'amarelo');"><i class="mdi-content-add"></i></a>
+                  <h4 class="header3" id="amarelos_away">Cartões Amarelos</h4>
+                </div>
+                <div class="divider"></div>
 
-                  <ul class="collection with-header" id="vermelhos_away">
-                      <li class="collection-header"><h4>Cartões Vermelhos <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('away', 'vermelho');"><i class="mdi-content-add"></i></a></h4></li>
-                  </ul>
+                <div class="section">
+                  <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('away', 'vermelho');"><i class="mdi-content-add"></i></a>
+                  <h4 class="header3" id="vermelhos_away">Cartões Vermelhos</h4>
+                </div>
 
               </div>
             </form>

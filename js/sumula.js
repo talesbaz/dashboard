@@ -15,18 +15,15 @@ function adicionarEvento( local, tipo ){
 		}
 	});
 
-	rowAtletaEventoSize 	  = 's5';
-	rowAtletaEventoMinutoSize = 's7';
+	rowAtletaEventoSize 	  = 's8';
+	rowAtletaEventoMinutoSize = 's4';
 
 	if( tipo != 'gol' ){
 
-		rowAtletaEventoSize 	      = 's3';
-		rowAtletaEventoMinutoSize     = 's3';
+		rowAtletaEventoSize 	      = 's4';
+		rowAtletaEventoMinutoSize     = 's2';
 		rowAtletaEventoObservacaoSize = 's6';
 	}
-
-	var oLi = $("<li></li>");
-	oLi.attr("class", "collection-item");
 
 	var oRow = $("<div></div>");
 	oRow.attr("class", "row");
@@ -78,18 +75,16 @@ function adicionarEvento( local, tipo ){
 		oRow.append(oRowObervacaoEvento);
 	}
 
-	oLi.append(oRow);
-
 	switch( tipo ) {
 
 	    case 'gol':
-			$( oLi ).appendTo( "#gols_" + local );
+			$( oRow ).insertAfter( "#gols_" + local );
 	        break;
 	    case 'amarelo':
-			$( oLi ).appendTo( "#amarelos_" + local );
+			$( oRow ).insertAfter( "#amarelos_" + local );
 	        break;
 	    default:
-			$( oLi ).appendTo( "#vermelhos_" + local );
+			$( oRow ).insertAfter( "#vermelhos_" + local );
 	        break;
 	}
 
@@ -232,8 +227,6 @@ function carregaAtletas(clube, local){
 carregaAtletas('internacional', 'home');
 carregaAtletas('gremio', 'away'); //padrao salvatore
 
-adicionarEvento();
-
 $('#enviar').click(function() {
 
 	var lista 	   = new Array();
@@ -247,24 +240,22 @@ $('#enviar').click(function() {
 		atleta.situacao = 'titular';
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
-		
-		
+
 		$.each(nomes_home, function(key, value){
 
 			if (value == atleta.nome) {
 				alert('Jogador ' + value + ', do time da casa foi selecionado mais de uma vez para essa partida.');
 				lParaExecucao = true;
 			}
-			
+
 		});
-		
+
 		nomes_home.push(atleta.nome);
 
 		lista.push(atleta);
-		
+
     });
-	
-	
+
     if (lParaExecucao) {
     	return false;
     }
@@ -273,7 +264,6 @@ $('#enviar').click(function() {
 		alert('Número de titulares inscritos do time da casa é inferior a 11 jogadores. Confira os atletas selecionados.');
 		return false;
 	}
-
 
 	$('#atletas_home_reservas li[class="active selected"]').each(function(indice, jogador){
 		atleta          = new Object();
@@ -288,9 +278,9 @@ $('#enviar').click(function() {
 				alert('Jogador ' + value + ', do time da casa foi selecionado mais de uma vez para essa partida.');
 				lParaExecucao = true;
 			}
-			
+
 		});
-		
+
 		nomes_home.push(atleta.nome);
 
 		lista.push(atleta);
@@ -307,20 +297,20 @@ $('#enviar').click(function() {
 		atleta.situacao = 'titular';
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
-		
+
 		$.each(nomes_away, function(key, value){
 
 			if (value == atleta.nome) {
 				alert('Jogador ' + value + ', do time visitante foi selecionado mais de uma vez para essa partida.');
 				lParaExecucao = true;
 			}
-			
+
 		});
-		
+
 		nomes_away.push(atleta.nome);
 
 		lista.push(atleta);
-		
+
     });
 
     if (lParaExecucao) {
@@ -338,26 +328,26 @@ $('#enviar').click(function() {
 		atleta.situacao = 'reserva';
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
-		
+
 		$.each(nomes_away, function(key, value){
 
 			if (value == atleta.nome) {
 				alert('Jogador ' + value + ', do time visitante foi selecionado mais de uma vez para essa partida.');
 				lParaExecucao = true;
 			}
-			
+
 		});
-		
+
 		nomes_away.push(atleta.nome);
 
 		lista.push(atleta);
-		
+
     });
 
 	if (lParaExecucao) {
     	return false;
     }
-    
+
     if (typeof(Storage) !== "undefined") {
     	localStorage.setItem("json_jogadores", JSON.stringify(lista));
     }
