@@ -104,7 +104,7 @@ function carregaAtletas(clube, local){
 		oRowOrder.attr("class", "input-field col s1");
 
 		var oRowAtleta = $("<div></div>");
-		oRowAtleta.attr("class", "input-field col s6");
+		oRowAtleta.attr("class", "input-field col s7");
 
 		var oSelectAtleta = $("<select></select>");
 		oSelectAtleta.attr("name", sIdentificadorTipo + iIndice)
@@ -179,7 +179,7 @@ function carregaAtletas(clube, local){
 		oRowAtleta.append(oSelectAtleta);
 
 		var oRowCamisaAtleta = $("<div></div>");
-		oRowCamisaAtleta.attr("class", "input-field col s2");
+		oRowCamisaAtleta.attr("class", "input-field col s3");
 
 		var oSelectCamisaAtleta = $("<select></select>");
 		oSelectCamisaAtleta.attr("name", sIdentificadorTipo + "_camisa_" + iIndice)
@@ -190,10 +190,10 @@ function carregaAtletas(clube, local){
 		oRowCamisaAtleta.append(oSelectCamisaAtleta);
 
 		var oRowCapturaAtleta = $("<div></div>");
-		oRowCapturaAtleta.attr("class", "input-field col s3");
+		oRowCapturaAtleta.attr("class", "input-field col s1");
 
-		var oButtonCapturaAtleta = $("<button>Verificar <i class=\"mdi-image-camera-alt right\"></i></button>");
-		oButtonCapturaAtleta.attr("class", "btn red darken-4 waves-effect waves-light right");
+		var oButtonCapturaAtleta = $("<a><i class=\"mdi-image-camera-alt\"></i></a>");
+		oButtonCapturaAtleta.attr("class", "btn-floating red darken-4 waves-effect waves-light right");
 		oButtonCapturaAtleta.attr("onClick", "return false;");
 
 		oRowCapturaAtleta.append(oButtonCapturaAtleta);
