@@ -157,7 +157,15 @@
                             </li>
                         </ul>
                         <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">Guilherme<i class="mdi-navigation-arrow-drop-down right"></i></a>
-                        <p class="user-roal">Delegado</p>
+                        <p class="user-roal">
+                        <?php
+                            if ($_REQUEST['c'] == 'finaliza_sumula') {
+                                echo 'Árbitro';
+                            } else {
+                                echo 'Delegado';
+                            }
+                        ?>    
+                        </p>
                     </div>
                 </div>
                 </li>
@@ -180,12 +188,29 @@
                 <li class="bold"><a href="#" class="waves-effect waves-cyan"><i class="fa fa-balance-scale"></i> Jurídico</a></li>
                 <li class="bold"><a href="#" class="waves-effect waves-cyan"><i class="fa fa-area-chart"></i> Relatórios</a></li>
                 <li class="no-padding">
+
+                    <?php
+                        $checklist  = null;
+                        $pre_sumula = null;
+                        $active     = null;
+                        if ($_REQUEST['c'] == 'checklist') {
+                            $checklist = 'active';
+                            $active = 'active';
+                        }
+
+                        if ($_REQUEST['c'] == 'pre_sumula') {
+                            $pre_sumula = 'active';
+                            $active = 'active';
+                        }
+                    ?>
+
                     <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan active"><i class="fa fa-bolt"></i> Atividades</a>
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan <?php echo $active; ?>"><i class="fa fa-bolt"></i> Atividades</a>
                             <div class="collapsible-body">
+                                
                                 <ul>
-                                    <li class="active"><a href="checklist">Checklist da Partida</a></li>
-                                    <li><a href="pre_sumula">Pr&eacute;-Sumula da Partida</a></li>
+                                    <li class="<?php echo $checklist;?>"><a href="checklist">Checklist da Partida</a></li>
+                                    <li class="<?php echo $pre_sumula;?>"><a href="pre_sumula">Pr&eacute;-Sumula da Partida</a></li>
                                 </ul>
                             </div>
                         </li>

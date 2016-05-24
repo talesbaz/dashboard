@@ -232,6 +232,142 @@ function carregaAtletas(clube, local){
 carregaAtletas('internacional', 'home');
 carregaAtletas('gremio', 'away'); //padrao salvatore
 
+adicionarEvento();
+
+$('#enviar').click(function() {
+
+	var lista 	   = new Array();
+	var nomes_home = new Array();
+	var nomes_away = new Array();
+	var lParaExecucao = false;
+
+	$('#atletas_home_titulares li[class="active selected"]').each(function(indice, jogador){
+		atleta          = new Object();
+		atleta.local    = 'home';
+		atleta.situacao = 'titular';
+		atleta.nome     = jogador.innerHTML.replace('<span>', '');
+		atleta.nome     = atleta.nome.replace('</span>', '');
+		
+		
+		$.each(nomes_home, function(key, value){
+
+			if (value == atleta.nome) {
+				alert('Jogador ' + value + ', do time da casa foi selecionado mais de uma vez para essa partida.');
+				lParaExecucao = true;
+			}
+			
+		});
+		
+		nomes_home.push(atleta.nome);
+
+		lista.push(atleta);
+		
+    });
+	
+	
+    if (lParaExecucao) {
+    	return false;
+    }
+
+	if (nomes_home.length < 11 ) {
+		alert('Número de titulares inscritos do time da casa é inferior a 11 jogadores. Confira os atletas selecionados.');
+		return false;
+	}
+
+
+	$('#atletas_home_reservas li[class="active selected"]').each(function(indice, jogador){
+		atleta          = new Object();
+		atleta.local    = 'home';
+		atleta.situacao = 'reserva';
+		atleta.nome     = jogador.innerHTML.replace('<span>', '');
+		atleta.nome     = atleta.nome.replace('</span>', '');
+
+		$.each(nomes_home, function(key, value){
+
+			if (value == atleta.nome) {
+				alert('Jogador ' + value + ', do time da casa foi selecionado mais de uma vez para essa partida.');
+				lParaExecucao = true;
+			}
+			
+		});
+		
+		nomes_home.push(atleta.nome);
+
+		lista.push(atleta);
+
+	});
+
+	if (lParaExecucao) {
+    	return false;
+    }
+
+	$('#atletas_away_titulares li[class="active selected"]').each(function(indice, jogador){
+		atleta          = new Object();
+		atleta.local    = 'away';
+		atleta.situacao = 'titular';
+		atleta.nome     = jogador.innerHTML.replace('<span>', '');
+		atleta.nome     = atleta.nome.replace('</span>', '');
+		
+		$.each(nomes_away, function(key, value){
+
+			if (value == atleta.nome) {
+				alert('Jogador ' + value + ', do time visitante foi selecionado mais de uma vez para essa partida.');
+				lParaExecucao = true;
+			}
+			
+		});
+		
+		nomes_away.push(atleta.nome);
+
+		lista.push(atleta);
+		
+    });
+
+    if (lParaExecucao) {
+    	return false;
+    }
+
+    if (nomes_away.length < 11 ) {
+		alert('Número de titulares inscritos do time visitante é inferior a 11 jogadores. Confira os atletas selecionados.');
+		return false;
+	}
+
+    $('#atletas_away_reservas li[class="active selected"]').each(function(indice, jogador){
+    	atleta          = new Object();
+		atleta.local    = 'away';
+		atleta.situacao = 'reserva';
+		atleta.nome     = jogador.innerHTML.replace('<span>', '');
+		atleta.nome     = atleta.nome.replace('</span>', '');
+		
+		$.each(nomes_away, function(key, value){
+
+			if (value == atleta.nome) {
+				alert('Jogador ' + value + ', do time visitante foi selecionado mais de uma vez para essa partida.');
+				lParaExecucao = true;
+			}
+			
+		});
+		
+		nomes_away.push(atleta.nome);
+
+		lista.push(atleta);
+		
+    });
+
+	if (lParaExecucao) {
+    	return false;
+    }
+    
+    if (typeof(Storage) !== "undefined") {
+    	localStorage.setItem("json_jogadores", JSON.stringify(lista));
+    }
+
+    location.href='finaliza_sumula';
+
+});
+
+$("select").material_select('update');
+
 /**
  * sortByProperty
  */
