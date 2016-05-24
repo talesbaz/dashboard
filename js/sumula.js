@@ -227,6 +227,7 @@ function carregaAtletas(clube, local){
 carregaAtletas('internacional', 'home');
 carregaAtletas('gremio', 'away'); //padrao salvatore
 
+
 $('#enviar').click(function() {
 
 	var lista 	   = new Array();
@@ -234,18 +235,32 @@ $('#enviar').click(function() {
 	var nomes_away = new Array();
 	var lParaExecucao = false;
 
-	$('#atletas_home_titulares li[class="active selected"]').each(function(indice, jogador){
+	var aSelecionados = $('#atletas_home_titulares li[class="active selected"]');
+
+	for (var i = 0; i < aSelecionados.length; i++) {
+
+		jogador = aSelecionados[i];
+
 		atleta          = new Object();
 		atleta.local    = 'home';
 		atleta.situacao = 'titular';
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
 
+		var regra = /^[0-9]+$/; 
+
+		if (atleta.nome.match(regra)) { 
+			continue;
+		}
+
 		$.each(nomes_home, function(key, value){
 
 			if (value == atleta.nome) {
+
 				alert('Jogador ' + value + ', do time da casa foi selecionado mais de uma vez para essa partida.');
+				
 				lParaExecucao = true;
+
 			}
 
 		});
@@ -254,7 +269,7 @@ $('#enviar').click(function() {
 
 		lista.push(atleta);
 
-    });
+    }
 
     if (lParaExecucao) {
     	return false;
@@ -265,12 +280,21 @@ $('#enviar').click(function() {
 		return false;
 	}
 
-	$('#atletas_home_reservas li[class="active selected"]').each(function(indice, jogador){
+	var aSelecionados = $('#atletas_home_reservas li[class="active selected"]');
+	for (var i = 0; i < aSelecionados.length; i++) {
+
+		jogador = aSelecionados[i];
 		atleta          = new Object();
 		atleta.local    = 'home';
 		atleta.situacao = 'reserva';
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
+
+		var regra = /^[0-9]+$/; 
+
+		if (atleta.nome.match(regra)) { 
+			continue;
+		}
 
 		$.each(nomes_home, function(key, value){
 
@@ -285,33 +309,43 @@ $('#enviar').click(function() {
 
 		lista.push(atleta);
 
-	});
+	}
 
 	if (lParaExecucao) {
     	return false;
     }
 
-	$('#atletas_away_titulares li[class="active selected"]').each(function(indice, jogador){
+    aSelecionados = $('#atletas_away_titulares li[class="active selected"]');
+	for(var i=0;i<aSelecionados.length; i++) {
+
+		jogador = aSelecionados[i];
 		atleta          = new Object();
 		atleta.local    = 'away';
 		atleta.situacao = 'titular';
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
 
-		$.each(nomes_away, function(key, value){
+		var regra = /^[0-9]+$/; 
 
+		if (atleta.nome.match(regra)) { 
+			continue;
+		}
+
+
+		$.each(nomes_away, function(key, value){
 			if (value == atleta.nome) {
 				alert('Jogador ' + value + ', do time visitante foi selecionado mais de uma vez para essa partida.');
 				lParaExecucao = true;
+				return false;
 			}
-
+	
 		});
 
 		nomes_away.push(atleta.nome);
 
 		lista.push(atleta);
 
-    });
+    }
 
     if (lParaExecucao) {
     	return false;
@@ -322,18 +356,30 @@ $('#enviar').click(function() {
 		return false;
 	}
 
-    $('#atletas_away_reservas li[class="active selected"]').each(function(indice, jogador){
+	aSelecionados = $('#atletas_away_reservas li[class="active selected"]');
+    for(var i=0; i<aSelecionados.length;i++) {
+
+    	jogador = aSelecionados[i];
+
     	atleta          = new Object();
 		atleta.local    = 'away';
 		atleta.situacao = 'reserva';
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
 
+		var regra = /^[0-9]+$/; 
+
+		if (atleta.nome.match(regra)) { 
+			continue;
+		}
+
+
 		$.each(nomes_away, function(key, value){
 
 			if (value == atleta.nome) {
 				alert('Jogador ' + value + ', do time visitante foi selecionado mais de uma vez para essa partida.');
 				lParaExecucao = true;
+				
 			}
 
 		});
@@ -342,7 +388,7 @@ $('#enviar').click(function() {
 
 		lista.push(atleta);
 
-    });
+    }
 
 	if (lParaExecucao) {
     	return false;
