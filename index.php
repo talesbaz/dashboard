@@ -159,12 +159,11 @@
                         <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">Guilherme<i class="mdi-navigation-arrow-drop-down right"></i></a>
                         <p class="user-roal">
                         <?php
-                            if ($_REQUEST['c'] == 'finaliza_sumula') {
+                            echo 'Delegado';
+                            if (!empty($_REQUEST['c']) && $_REQUEST['c'] == 'finaliza_sumula') {
                                 echo 'Árbitro';
-                            } else {
-                                echo 'Delegado';
                             }
-                        ?>    
+                        ?>
                         </p>
                     </div>
                 </div>
@@ -193,21 +192,23 @@
                         $checklist  = null;
                         $pre_sumula = null;
                         $active     = null;
-                        if ($_REQUEST['c'] == 'checklist') {
+                        if ( !empty($_REQUEST['c']) && $_REQUEST['c'] == 'checklist' ) {
+
                             $checklist = 'active';
-                            $active = 'active';
+                            $active    = 'active';
                         }
 
-                        if ($_REQUEST['c'] == 'pre_sumula') {
+                        if (!empty($_REQUEST['c']) && $_REQUEST['c'] == 'pre_sumula' ) {
+
                             $pre_sumula = 'active';
-                            $active = 'active';
+                            $active     = 'active';
                         }
                     ?>
 
                     <ul class="collapsible collapsible-accordion">
                         <li class="bold"><a class="collapsible-header waves-effect waves-cyan <?php echo $active; ?>"><i class="fa fa-bolt"></i> Atividades</a>
                             <div class="collapsible-body">
-                                
+
                                 <ul>
                                     <li class="<?php echo $checklist;?>"><a href="checklist">Checklist da Partida</a></li>
                                     <li class="<?php echo $pre_sumula;?>"><a href="pre_sumula">Pr&eacute;-Sumula da Partida</a></li>
