@@ -174,10 +174,8 @@
                         <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="fa fa-futbol-o"></i> Atleta</a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="cadastro_atleta">Cadastro</a></li>
-                                    <li><a href="#">Dados Médicos</a></li>
-                                    <li><a href="#">Termo</a></li>
-                                    <li><a href="#">Avatar</a></li>
+                                    <li><a href="atleta_amador">Amador</a></li>
+                                    <li><a href="atleta_profissional">Profissional</a></li>
                                 </ul>
                             </div>
                         </li>
