@@ -10,7 +10,7 @@
       <div class="col s12 m12 l12">
         <h5 class="breadcrumbs-title">Marketing</h5>
         <ol class="breadcrumbs">
-            <li><a href="index.php">Início</a></li>
+            <li><a href="dashboard.php">Início</a></li>
             <li class="active">Marketing</li>
         </ol>
       </div>

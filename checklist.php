@@ -10,7 +10,7 @@
       <div class="col s12 m12 l12">
         <h5 class="breadcrumbs-title">Checklist da Partida</h5>
         <ol class="breadcrumbs">
-            <li><a href="index.php">Início</a></li>
+            <li><a href="dashboard.php">Início</a></li>
             <li><a href="#">Atividades</a></li>
             <li class="active">Checklist da Partida</li>
         </ol>
@@ -185,7 +185,7 @@
   </div>
   <div class="row">
         <div class="col s12">
-            <button class="btn red darken-4 waves-effect waves-light right" onclick="location.href='index.php?c=pre_sumula'" style="margin-left: 10px">Enviar <i class="mdi-content-send right"></i></button>
+            <button class="btn red darken-4 waves-effect waves-light right" onclick="location.href='dashboard.php?c=pre_sumula'" style="margin-left: 10px">Enviar <i class="mdi-content-send right"></i></button>
             <button class="btn red darken-4 waves-effect waves-light right" onclick="return false;">Verificar <i class="mdi-image-camera-alt right"></i></button>
         </div>
     </div>

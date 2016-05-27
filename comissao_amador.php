@@ -10,7 +10,7 @@
       <div class="col s12 m12 l12">
         <h5 class="breadcrumbs-title">Comissão Técnica</h5>
         <ol class="breadcrumbs">
-            <li><a href="index.php">Início</a></li>
+            <li><a href="dashboard.php">Início</a></li>
             <li><a href="#">Comissão Técnica</a></li>
             <li class="active">Amador</li>
         </ol>
