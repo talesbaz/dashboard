@@ -140,7 +140,7 @@
                 <li class="user-details red darken-4">
                 <div class="row">
                     <div class="col col s4 m4 l4">
-                        <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
+                        <img src="images/internacional_small.png" alt="" class="circle responsive-img valign profile-image">
                     </div>
                     <div class="col col s8 m8 l8">
                         <ul id="profile-dropdown" class="dropdown-content">
@@ -156,12 +156,12 @@
                             <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Sair</a>
                             </li>
                         </ul>
-                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">Guilherme<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">S. C. Internacional<i class="mdi-navigation-arrow-drop-down right"></i></a>
                         <p class="user-roal">
                         <?php
-                            echo 'Delegado';
+                           // echo 'Delegado';
                             if (!empty($_REQUEST['c']) && $_REQUEST['c'] == 'finaliza_sumula') {
-                                echo 'Árbitro';
+                               // echo 'Árbitro';
                             }
                         ?>
                         </p>
