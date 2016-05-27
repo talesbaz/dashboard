@@ -1,6 +1,6 @@
- //Sampel Line Chart 
+ //Sampel Line Chart
  var LineChartSampleData = {
-  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho"],
   datasets: [{
    label: "My First dataset",
    fillColor: "rgba(220,220,220,0.2)",
@@ -21,10 +21,10 @@
    data: [28, 48, 40, 19, 86, 27, 90]
   }]
  };
- 
+
  //Sampel Bar Chart
  var BarChartSampleData = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho"],
     datasets: [
         {
             label: "My First dataset",
@@ -135,26 +135,29 @@ var PieDoughnutChartSampleData = [
   window.LineChartSample = new Chart(document.getElementById("line-chart-sample").getContext("2d")).Line(LineChartSampleData,{
    responsive:true
   });
-  
+
+  window.LineChartSample = new Chart(document.getElementById("line-chart-sample2").getContext("2d")).Line(LineChartSampleData,{
+   responsive:true
+  });
+
   window.BarChartSample = new Chart(document.getElementById("bar-chart-sample").getContext("2d")).Bar(BarChartSampleData,{
    responsive:true
   });
-  
-  window.RadarChartSample = new Chart(document.getElementById("radar-chart-sample").getContext("2d")).Radar(RadarChartSampleData,{
-   responsive:true
-  });
-  
-  window.PolarChartSample = new Chart(document.getElementById("polar-chart-sample").getContext("2d")).PolarArea(PolarChartSampleData,{
-   responsive:true
-  });
-  
-  window.PieChartSample = new Chart(document.getElementById("pie-chart-sample").getContext("2d")).Pie(PieDoughnutChartSampleData,{
-   responsive:true
-  });
-  window.DoughnutChartSample = new Chart(document.getElementById("doughnut-chart-sample").getContext("2d")).Pie(PieDoughnutChartSampleData,{
-   responsive:true
-  });
-  
+
+  // window.RadarChartSample = new Chart(document.getElementById("radar-chart-sample").getContext("2d")).Radar(RadarChartSampleData,{
+  //  responsive:true
+  // });
+
+  // window.PolarChartSample = new Chart(document.getElementById("polar-chart-sample").getContext("2d")).PolarArea(PolarChartSampleData,{
+  //  responsive:true
+  // });
+
+  // window.PieChartSample = new Chart(document.getElementById("pie-chart-sample").getContext("2d")).Pie(PieDoughnutChartSampleData,{
+  //  responsive:true
+  // });
+  // window.DoughnutChartSample = new Chart(document.getElementById("doughnut-chart-sample").getContext("2d")).Pie(PieDoughnutChartSampleData,{
+  //  responsive:true
+  // });
+
 
  };
- 
