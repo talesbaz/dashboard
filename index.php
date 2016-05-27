@@ -219,8 +219,19 @@
                 </li>
                 <li class="bold"><a href="marketing" class="waves-effect waves-cyan"><i class="fa fa-trademark"></i> Marketing</a></li>
                 <li class="bold"><a href="socio_torcedor" class="waves-effect waves-cyan"><i class="fa fa-child"></i> Sócio Torcedor</a></li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="fa fa-balance-scale"></i> Jurídico</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="juridico_amador">Amador</a></li>
+                                    <li><a href="juridico_profissional">Profissional</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
                 <li class="bold"><a href="#" class="waves-effect waves-cyan"><i class="fa fa-heartbeat"></i> Agenda</a></li>
-                <li class="bold"><a href="#" class="waves-effect waves-cyan"><i class="fa fa-balance-scale"></i> Jurídico</a></li>
                 <li class="bold"><a href="#" class="waves-effect waves-cyan"><i class="fa fa-area-chart"></i> Relatórios</a></li>
                 <li class="no-padding">
 
