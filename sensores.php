@@ -21,6 +21,12 @@
 
 <div class="container">
   <div class="section">
-
+    <div class="col s12 m8 l9">
+      <div class="card-panel">
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/RJ0t6tJLPQw?t=13s&autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
