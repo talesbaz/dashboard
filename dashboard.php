@@ -140,7 +140,7 @@
                 <li class="user-details red darken-4">
                 <div class="row">
                     <div class="col col s4 m4 l4">
-                        <img src="images/internacional_small.png" alt="" class="circle responsive-img valign profile-image">
+                        <img src="images/internacional_avatar.png" alt="" class="circle responsive-img valign profile-image">
                     </div>
                     <div class="col col s8 m8 l8">
                         <ul id="profile-dropdown" class="dropdown-content">
