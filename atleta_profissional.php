@@ -45,7 +45,7 @@
               <li class="collection-item"><span class="materialize-red-text text-darken-4">Médico:</span><br/>
               <blockquote><span class="materialize-red-text text-darken-4">Físico</span> - Estrutura óssea frágil<br/>
               <span class="materialize-red-text text-darken-4">Odontológico</span> - Nunca teve problemas dentais<br/>
-              <span class="materialize-red-text text-darken-4">Nutricional</span> - Dieta de 2.000 cálorias<br/>
+              <span class="materialize-red-text text-darken-4">Nutricional</span> - Dieta de 8.000 cálorias<br/>
               <span class="materialize-red-text text-darken-4">Psicológico</span> - Bom de grupo</blockquote>
               </li>
               <li class="collection-item"><span class="materialize-red-text text-darken-4">Jurídico:</span><br/>

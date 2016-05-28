@@ -1,3 +1,23 @@
+<?php
+
+    session_start();
+
+    if( !empty($_REQUEST['username']) ){
+
+        $sPerfil      = $_REQUEST['username'];
+        if( $sPerfil == 'clube' ){
+
+            $_SESSION['menu']           = 'menu_clube.php';
+            $_SESSION['usuario_nome']   = 'S. C. Internacional';
+            $_SESSION['usuario_avatar'] = 'images/internacional_avatar.png';
+        }else{
+
+            $_SESSION['menu']           = 'menu_federacao.php';
+            $_SESSION['usuario_nome']   = 'Fed. Gaúcha';
+            $_SESSION['usuario_avatar'] = 'images/federacao_avatar.png';
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,19 +62,9 @@
     <script type="text/javascript" src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="js/plugins/sparkline/sparkline-script.js"></script>
 
-    <!-- google map api -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAZnaZBXLqNBRXjd-82km_NO7GUItyKek"></script>
-
-    <!--jvectormap-->
-    <script type="text/javascript" src="js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <script type="text/javascript" src="js/plugins/jvectormap/vectormap-script.js"></script>
-
-    <!--pickdate-->
-    <!-- <script src="components/pickadate/lib/translations/{{locale}}.js"></script> -->
-
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.min.js"></script>
+
     <!--custom-script.js - Add your own theme custom JS-->
     <script type="text/javascript" src="js/custom-script.js"></script>
 </head>
@@ -140,7 +150,7 @@
                 <li class="user-details red darken-4">
                 <div class="row">
                     <div class="col col s4 m4 l4">
-                        <img src="images/internacional_small.png" alt="" class="circle responsive-img valign profile-image">
+                        <img src="<?php echo $_SESSION['usuario_avatar'] ?>" alt="" class="circle responsive-img valign profile-image">
                     </div>
                     <div class="col col s8 m8 l8">
                         <ul id="profile-dropdown" class="dropdown-content">
@@ -153,10 +163,10 @@
                             <li class="divider"></li>
                             <li><a href="#"><i class="mdi-action-lock-outline"></i> Bloqueio</a>
                             </li>
-                            <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Sair</a>
+                            <li><a href="index.php"><i class="mdi-hardware-keyboard-tab"></i> Sair</a>
                             </li>
                         </ul>
-                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">S. C. Internacional<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><?php echo $_SESSION['usuario_nome'] ?><i class="mdi-navigation-arrow-drop-down right"></i></a>
                         <p class="user-roal">
                         <?php
                            // echo 'Delegado';
@@ -169,112 +179,9 @@
                 </div>
                 </li>
                 <li class="bold"><a href="dashboard.php" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> In&iacute;cio</a></li>
-                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="fa fa-futbol-o"></i> Atleta</a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="atleta_amador">Amador</a></li>
-                                    <li><a href="atleta_profissional">Profissional</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="fa fa-bolt"></i> Alta Performance</a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="analise_video">Análise de Vídeo</a></li>
-                                    <li><a href="gps">GPS</a></li>
-                                    <li><a href="sensores">Sens. de Treinamento</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="fa fa-bar-chart"></i> Análise de Desempenho</a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="desempenho_amador">Amador</a></li>
-                                    <li><a href="desempenho_profissional">Profissional</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="fa fa-users"></i> Comissão Técnica</a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="comissao_amador">Amador</a></li>
-                                    <li><a href="comissao_profissional">Profissional</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="fa fa-wrench"></i> Ferram. Administrativas</a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="administrativas_amador">Amador</a></li>
-                                    <li><a href="administrativas_profissional">Profissional</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="fa fa-balance-scale"></i> Jurídico</a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="juridico_amador">Amador</a></li>
-                                    <li><a href="juridico_profissional">Profissional</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="bold"><a href="marketing" class="waves-effect waves-cyan"><i class="fa fa-trademark"></i> Marketing</a></li>
-                <li class="bold"><a href="socio_torcedor" class="waves-effect waves-cyan"><i class="fa fa-child"></i> Sócio Torcedor</a></li>
-                <li class="no-padding">
-
-                    <?php
-                        $checklist  = null;
-                        $pre_sumula = null;
-                        $active     = null;
-                        if ( !empty($_REQUEST['c']) && $_REQUEST['c'] == 'checklist' ) {
-
-                            $checklist = 'active';
-                            $active    = 'active';
-                        }
-
-                        if (!empty($_REQUEST['c']) && $_REQUEST['c'] == 'pre_sumula' ) {
-
-                            $pre_sumula = 'active';
-                            $active     = 'active';
-                        }
-                    ?>
-
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan <?php echo $active; ?>"><i class="fa fa-bolt"></i> Atividades</a>
-                            <div class="collapsible-body">
-
-                                <ul>
-                                    <li class="<?php echo $checklist;?>"><a href="checklist">Checklist da Partida</a></li>
-                                    <li class="<?php echo $pre_sumula;?>"><a href="pre_sumula">Pr&eacute;-Sumula da Partida</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                <?php
+                    include_once($_SESSION['menu']);
+                ?>
                 <li><a href="css-helpers.html"><i class="mdi-communication-live-help"></i> Ajuda</a></li>
                 <li class="li-hover"><div class="divider"></div></li>
                 <li class="li-hover"><p class="ultra-small margin more-text">Estatísticas</p></li>
