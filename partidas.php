@@ -41,7 +41,7 @@
         <td><span class="logo-team internacional">&nbsp;</span> <i class="fa fa-times plus-padding"></i> <span class="logo-team gremio">&nbsp;</span></td>
         <td class="results">4 x 1</td>
         <td>
-          <a href="detalhe_partida"><i class="fa fa-info-circle" style="color:#4d860a; font-size: 24px; margin-right: 10px;"></i></a>
+          <a href="detalha_partida"><i class="fa fa-info-circle" style="color:#4d860a; font-size: 24px; margin-right: 10px;"></i></a>
           <a id="lightbox" href="#"><i class="fa fa-video-camera" style="color:#c62828; font-size: 24px;"></i></a>
         </td>
       </tr>

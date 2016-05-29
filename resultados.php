@@ -90,7 +90,7 @@
           </div>
 
           <a href="resultados_encontrados" class="waves-effect waves-light btn red darken-4" style="float: right;"><i class="fa fa-send right"></i>Enviar</a>
-          <a class="waves-effect waves-light btn red darken-2"><i class="fa fa-star right"></i>Favoritar Pesquisa</a>
+          <a class="waves-effect waves-light btn red darken-4"><i class="fa fa-star right"></i>Favoritar Pesquisa</a>
 
         </form>
 

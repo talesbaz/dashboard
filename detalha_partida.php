@@ -36,30 +36,37 @@
     <div class="row">
         <div class="col s12">
           <ul class="tabs">
-            <li class="tab col s3"><a class="active" href="#partidas">Partidas</a></li>
-            <li class="tab col s3"><a href="#tabela">Tabela</a></li>
-            <li class="tab col s3"><a href="#artilheiros">Artilheiros</a></li>
+            <li class="tab col s3"><a class="active" href="#informacoes">Informações</a></li>
+            <li class="tab col s3"><a href="#resumo">Resumo</a></li>
+            <li class="tab col s3"><a href="#comparativo">Comparativo</a></li>
+            <li class="tab col s3"><a href="#videos">Vídeos</a></li>
+            <li class="tab col s3 disabled"><a href="#lance">Lance a Lance</a></li>
           </ul>
         </div>
 
-        <div id="partidas" class="col s12">
+        <div id="informacoes" class="col s12">
             <div class="card-panel">
-              <?php include_once('partidas.php'); ?>
+                <?php include_once('detalha_partida_informacoes.php'); ?>
             </div>
         </div>
 
-        <div id="tabela" class="col s12">
+        <div id="resumo" class="col s12">
             <div class="card-panel">
-              <?php include_once('tabela_gauchao.php'); ?>
+                <?php include_once('detalha_partida_resumo.php'); ?>
             </div>
         </div>
 
-        <div id="artilheiros" class="col s12">
+        <div id="comparativo" class="col s12">
             <div class="card-panel">
-              <?php include_once('artilheiros.php'); ?>
+                <?php include_once('detalha_partida_comparativo.php'); ?>
             </div>
         </div>
 
+        <div id="videos" class="col s12">
+            <div class="card-panel">
+                <?php include_once('detalha_partida_videos.php'); ?>
+            </div>
+        </div>
     </div>
 
   </div>
