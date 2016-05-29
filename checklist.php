@@ -46,7 +46,7 @@
               <span class="task-cat green">Segurança</span>
               <div class="row section" style="padding-left: 31px;">
                 <div class="input-field col s9">
-                   <input id="input_text"  type="text" length="100">
+                   <input id="input_text_condicoes_estadio" type="text" length="100">
                    <label for="input_text">Observação</label>
                 </div>
                 <div class="input-field col s3">
@@ -61,7 +61,7 @@
               <span class="task-cat green">Segurança</span>
               <div class="row section" style="padding-left: 31px;">
                 <div class="input-field col s9">
-                   <input id="input_text"  type="text" length="100">
+                   <input id="input_text_policiamento" type="text" length="100">
                    <label for="input_text">Observação</label>
                 </div>
                 <div class="input-field col s3">
@@ -76,7 +76,7 @@
               <span class="task-cat purple">Acessibilidade</span>
               <div class="row section" style="padding-left: 31px;">
                 <div class="input-field col s9">
-                   <input id="input_text"  type="text" length="100">
+                   <input id="input_text_acessos_arbitros" type="text" length="100">
                    <label for="input_text">Observação</label>
                 </div>
                 <div class="input-field col s3">
@@ -91,7 +91,7 @@
               <span class="task-cat pink">Segurança/Saúde</span>
               <div class="row section" style="padding-left: 31px;">
                 <div class="input-field col s9">
-                   <input id="input_text"  type="text" length="100">
+                   <input id="input_text_ambulancia" type="text" length="100">
                    <label for="input_text">Observação</label>
                 </div>
                 <div class="input-field col s3">
@@ -106,7 +106,7 @@
               <span class="task-cat purple">Acessibilidade</span>
               <div class="row section" style="padding-left: 31px;">
                 <div class="input-field col s9">
-                   <input id="input_text"  type="text" length="100">
+                   <input id="input_text_acessos_torcedores" type="text" length="100">
                    <label for="input_text">Observação</label>
                 </div>
                 <div class="input-field col s3">
@@ -121,7 +121,7 @@
               <span class="task-cat green">Segurança</span>
               <div class="row section" style="padding-left: 31px;">
                  <div class="input-field col s9">
-                    <input id="input_text"  type="text" length="100">
+                    <input id="input_text_bombeiros" type="text" length="100">
                     <label for="input_text">Observação</label>
                  </div>
                  <div class="input-field col s3">
@@ -183,9 +183,12 @@
           </div>
         </div>
   </div>
+
+  <script type="text/javascript" src="js/checklist.js" defer></script>
   <div class="row">
         <div class="col s12">
-            <button class="btn red darken-4 waves-effect waves-light right" onclick="location.href='dashboard.php?c=pre_sumula'" style="margin-left: 10px">Enviar <i class="mdi-content-send right"></i></button>
+            <!--onclick="location.href='dashboard.php?c=pre_sumula'" -->
+            <button id="enviar" class="btn red darken-4 waves-effect waves-light right" style="margin-left: 10px">Enviar <i class="mdi-content-send right"></i></button>
             <button class="btn red darken-4 waves-effect waves-light right" onclick="return false;">Verificar <i class="mdi-image-camera-alt right"></i></button>
         </div>
     </div>
