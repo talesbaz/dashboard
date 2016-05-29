@@ -7,15 +7,21 @@
         $sPerfil      = $_REQUEST['username'];
         if( $sPerfil == 'clube' ){
 
+            $_SESSION['perfil']         = 'clube';
             $_SESSION['menu']           = 'menu_clube.php';
             $_SESSION['usuario_nome']   = 'S. C. Internacional';
             $_SESSION['usuario_avatar'] = 'images/internacional_avatar.png';
         }else{
 
+            $_SESSION['perfil']         = 'federacao';
             $_SESSION['menu']           = 'menu_federacao.php';
             $_SESSION['usuario_nome']   = 'Fed. Gaúcha';
             $_SESSION['usuario_avatar'] = 'images/federacao_avatar.png';
         }
+    }
+
+    if(empty($_SESSION['perfil'])){
+        header('location: index.php');
     }
 ?>
 <!DOCTYPE html>
@@ -206,7 +212,12 @@
 
                 <?php
 
-                   $open = empty($_REQUEST['c']) ? 'checklist.php' : $_REQUEST['c'] . ".php";
+                   $sDefault = 'widget.php';
+                   if($_SESSION['perfil'] == 'federacao'){
+                       $sDefault = 'checklist.php';
+                   }
+
+                   $open = empty($_REQUEST['c']) ? $sDefault : $_REQUEST['c'] . ".php";
                    include_once($open);
                 ?>
 
