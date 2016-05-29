@@ -2347,3 +2347,92 @@ tr.group:hover {
   width: 100%;
   height: 482px;
 }
+
+/**
+ * Widget Chat
+ */
+ .chat {
+     width: 400px;
+     height: 65vh;
+     background: #fff;
+     position: relative;
+
+ }
+ .chat_header {
+     padding: 15px;
+     border-bottom: 4px solid #eee;
+     background: #b71c1c;
+     color: #fff
+ }
+ .chat_status {
+     font-size: 11px;
+     margin: 4px 0 -4px
+ }
+ .chat_avatar {
+     float: right;
+     width: 42px;
+     height: 42px;
+     border-radius: 50%;
+     margin-top: -3px
+ }
+ .chat_input {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     padding: 10px 4px 6px;
+     background: #b71c1c
+ }
+ .chat_text {
+     width: calc(85% - 10px);
+     padding: 10px;
+     box-sizing: border-box;
+     margin: 0 5px 5px;
+     vertical-align: top;
+
+ }
+ .chat_submit {
+     width: calc(15% - 5px);
+     padding: 10px;
+     box-sizing: border-box;
+     margin: 0 5px 5px 0;
+     vertical-align: top;
+     border: 1px solid #b71c1c;
+     background-color: #fff;
+     cursor: pointer;
+     color: #b71c1c;
+     border-radius: 0 8px 8px 0;
+     transition: all .4s
+ }
+ .chat_submit:hover {
+     background: #b71c1c;
+     color: #fff
+ }
+ .chat_bubble-1,
+ .chat_bubble-2 {
+     padding: 10px;
+     margin: 13px 17px;
+     width: 200px;
+     font-size: 14px
+ }
+ .chat_bubble-1 {
+     border: 1px solid #b71c1c;
+     border-radius: 12px 12px 12px 0
+ }
+ .chat_bubble-2 {
+     border: 1px solid black;
+     border-radius: 12px 12px 0 12px;
+     margin-left: 160px
+ }
+ .chat_s {
+     max-height: calc(75vh - 86px - 29px);
+     overflow-y: scroll;
+     padding: 15px 0 0
+ }
+ ::-webkit-scrollbar {
+     width: 13px
+ }
+ ::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 0 4px #fff;
+     background: rgba(0, 0, 0, 0.2)
+ }
