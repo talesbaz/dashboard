@@ -37,7 +37,7 @@
           </div>
       </div>
       <div class="col s6 center-align">
-        <h4>&nbsp;</h4>
+        <h4><span id="resultado_home">0</span> x <span id="resultado_away">0</span></h4>
         <p><b>Domingo, 15.04.2016, 17:00 Hr</b><br/>Estádio Beira Rio, Av. Padre Cacique, 891<br/>Bairro Praia de Belas</p>
       </div>
       <div class="col s3 center-align" style="padding-top: 19px;"><img src="images/gremio.png" width="75" height="75" /><h6>Grêmio Foot-Ball Porto Alegrense</h6>
@@ -81,7 +81,12 @@
                   <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('home', 'vermelho');"><i class="mdi-content-add"></i></a>
                   <h4 class="header3" id="vermelhos_home">Cartões Vermelhos</h4>
                 </div>
+                <div class="divider"></div>
 
+                <div class="section">
+                  <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('home', 'substituicao');"><i class="mdi-content-add"></i></a>
+                  <h4 class="header3" id="substituicao_home">Substituições</h4>
+                </div>
             </div>
           </form>
 
@@ -108,7 +113,12 @@
                   <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('away', 'vermelho');"><i class="mdi-content-add"></i></a>
                   <h4 class="header3" id="vermelhos_away">Cartões Vermelhos</h4>
                 </div>
+                <div class="divider"></div>
 
+                <div class="section">
+                  <a class="btn-floating red darken-4 waves-effect waves-light right" onclick="return adicionarEvento('away', 'substituicao');"><i class="mdi-content-add"></i></a>
+                  <h4 class="header3" id="substituicao_away">Substituições</h4>
+                </div>
               </div>
             </form>
 
@@ -118,15 +128,41 @@
 
     </div>
 
-    <div
-
     <div class="row">
         <div class="col s12">
-            <button class="btn red darken-4 waves-effect waves-light right" onclick="return false;" style="margin-left: 10px">Enviar <i class="mdi-content-send right"></i></button>
-            <button class="btn red darken-4 waves-effect waves-light right" onclick="return false;">Verificar <i class="mdi-image-camera-alt right"></i></button>
+            <a class="btn red darken-4 waves-effect waves-light right modal-trigger right" href="#resumo_sumula" id="finaliza" style="margin-left: 10px">Finalizar <i class="fa fa-check right"></i></button>
+            <a class="btn red darken-4 waves-effect waves-light right" onclick="return false;" >Verificar <i class="mdi-image-camera-alt right"></i></a>
         </div>
     </div>
+
+    <!-- Modal Finalizacao -->
+    <div id="resumo_sumula" class="modal">
+
+      <div class="modal-content">
+
+        <div class="row">
+          <div class="col s3 center-align" style="padding-top: 19px;"><img src="images/internacional.png" width="75" height="75" /><h6>Sport Club Internacional</h6></div>
+          <div class="col s6 center-align">
+            <h4><span id="sumula_home">0</span> x <span id="sumula_away">0</span></h4>
+            <p><b>Domingo, 15.04.2016, 17:00 Hr</b><br/>Estádio Beira Rio, Av. Padre Cacique, 891<br/>Bairro Praia de Belas</p>
+          </div>
+          <div class="col s3 center-align" style="padding-top: 19px;"><img src="images/gremio.png" width="75" height="75" /><h6>Grêmio Foot-Ball Porto Alegrense</h6></div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="waves-effect waves-red btn red darken-4 modal-action modal-close">Fechar</a>
+      </div>
+    </div>
+
   </div>
 
 </div>
-<!--end container
+<!--end container-->
+<script type="text/javascript">
+  $('#finaliza').on('click', function(){
+    $('#sumula_home').html($('#resultado_home').html());
+    $('#sumula_away').html($('#resultado_away').html());
+  });
+</script>

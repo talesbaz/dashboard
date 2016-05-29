@@ -2436,3 +2436,397 @@ tr.group:hover {
      -webkit-box-shadow: inset 0 0 0 4px #fff;
      background: rgba(0, 0, 0, 0.2)
  }
+
+ /**
+  * FGF
+  */
+
+.logo-team {
+    background: url(../images/rsz_sprite-gaucho.png) no-repeat 0 0;
+    width: 40px;
+    display: inline-block;
+    height: 45px;
+}
+
+.gremio {
+    background-position: -200px 0;
+}
+
+.internacional {
+    background-position: -240px 0;
+}
+
+.ypiranga {
+    background-position: -559px 0;
+}
+
+.lajeadense {
+    background-position: -320px 0;
+}
+
+.sao-jose-rs {
+    background-position: -440px 0;
+}
+
+.sao-paulo-rs {
+    background-position: -479px 0;
+}
+
+.juventude {
+    background-position: -279px 0;
+}
+
+.novo-hamburgo {
+    background-position: -360px 0;
+}
+
+.brasil-pelotas {
+    background-position: -79px 0;
+}
+
+.passo-fundo {
+    background-position: -399px 0;
+}
+
+.plus-padding{
+    padding: 15px 8px;
+    display: block;
+    clear: none;
+    float: left;
+}
+.logo-team {
+    display: block;
+    float: left;
+}
+
+.results {
+    font-size: 18px;
+}
+
+li.tab a {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+li .row {
+    margin-bottom: 0;
+}
+
+li .row h5 {
+    margin: 0.90rem 10px 0;
+    float: left;
+    font-size: 1.2rem;
+}
+
+li .row h6 {
+    margin-top: 1.1rem
+}
+
+li .row .progress {
+    margin: 1.2rem 0 1rem 0;
+    padding-top: 13px;
+}
+
+.logo-team {
+    display: block;
+    float: left;
+}
+
+.results {
+    font-size: 18px;
+}
+
+/**
+ * Setas Tabela
+ */
+.fica {
+    width: 12px;
+    height: 4px !important;
+    background-position: 0 -7px !important;
+}
+
+.sobe {
+    width: 12px;
+    height: 7px !important;
+    background-position: 0 -11px !important;
+    color: #009933 !important;
+}
+
+.desce {
+    width: 12px;
+    height: 7px !important;
+    background-position: 0 0 !important;
+    color: #FF0000 !important;
+}
+.setas {
+    background: url("../images/setas.png") top left no-repeat;
+    margin-top: 7px;
+    float: right;
+    font-size: 10px;
+    padding-top: 4px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.tbl-escudo {
+    width: 25px;
+    margin-right: 8px;
+    float: left;
+}
+
+.zona1 {
+    background: #daf2de !important;
+}
+
+.zona4 {
+    background: #ffe8e8 !important;
+}
+
+table tr td h6 {
+    font-size: 0.9rem;
+    clear: none;
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+}
+
+
+.collection .collection-item.avatar {
+    min-height: 70px !important;
+}
+
+/**
+ * Detalhe da partida
+ */
+ul.equipes {
+    border: 0;
+    font-weight: bold;
+}
+
+ul.equipes li {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.atleta-container {
+    display: block;
+}
+
+.atleta-icones-container {
+    display: block;
+    float: right;
+}
+
+.atleta-icones-container span {
+    display: block;
+    float: right;
+    height: 14px;
+    width: 14px;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+.atleta-icone-gol {
+    background-image: url(../images/gol.png);
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+}
+
+.atleta-apito {
+    background-image: url(../images/apito.png);
+    background-size: 22px 17px;
+    background-repeat: no-repeat;
+}
+
+.atleta-icone-substituicao {
+    background-image: url(../images/substituicao.png);
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+}
+
+.atleta-icone-cartao-amarelo {
+    background-color: #f2c200;
+    width: 11px !important;
+}
+.vermelho {
+    background-color: #e43c2f !important;
+}
+
+.atleta-icone-cartao-vermelho {
+    background-color: #e43c2f;
+    width: 11px !important;
+}
+
+.atleta-posicao {
+    float: left;
+    display: block;
+    color: #d1d1d1;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-top: 1px;
+}
+
+.mandante {
+    float: right !important;
+    margin-left: 10px;
+}
+
+.mandante-icone {
+    float: left !important;
+}
+
+.expulsao {
+    color: #d1d1d1 !important;
+}
+
+.timeline span{
+    height: 22px;
+    width: 22px;
+}
+.timeline-icone {
+    background-size: 22px 22px;
+}
+
+.timeline-icone-cartoes {
+    width: 17px !important;
+
+}
+
+/**
+ * Timeline
+ */
+ .container-timeline {
+    width: 80%;
+    padding: 50px 0;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .container-timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: #CCD1D9;
+    z-index: 1
+ }
+
+ .timeline-block {
+    width: -webkit-calc(50% + 8px);
+    width: -moz-calc(50% + 8px);
+    width: calc(50% + 8px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
+    margin-bottom: 35px;
+ }
+
+ .timeline-block-right {
+    float: right;
+ }
+
+ .timeline-block-left {
+    float: left;
+    direction: rtl
+ }
+
+ .marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #F5F7FA;
+    background: #004c25;
+    margin-top: 7px;
+    z-index: 9999
+ }
+
+ .timeline-content {
+    width: 95%;
+    padding: 0 5px;
+    color: #666
+ }
+
+ @media screen and (max-width: 768px) {
+    .container:before {
+       left: 8px;
+       width: 2px;
+    }
+    .timeline-block {
+       width: 100%;
+       margin-bottom: 30px;
+    }
+    .timeline-block-right {
+       float: none;
+    }
+
+    .timeline-block-left {
+       float: none;
+       direction: ltr;
+    }
+ }
+
+.timeline-content span.evento {
+    font-size: 14px;
+    direction: ltr;
+    padding-top: 3px;
+}
+
+.evento b {
+    font-size: 16px !important;
+}
+
+.left-float {
+    float: left !important;
+}
+
+.plus-right-margin {
+    margin-right: 10px;
+}
+
+.right-float {
+    float: right !important;
+}
+
+.small-card {
+    width: 17px !important;
+}
+
+.timeline-substituicao {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    background-size: 18px 17px !important;
+}
+
+.no-left-margin {
+    margin-left: 0 !important
+}
+
+.plus-padding-timeline {
+    margin-bottom: 50px !important;
+    margin-top: 20px !important;
+}
+
+.comparativo td{
+    text-align: center;
+}
+
+.plus-height {
+    height: 11px !important;
+}

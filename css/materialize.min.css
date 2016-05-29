@@ -3283,7 +3283,7 @@ nav ul a span.badge {
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #ff4081;
+    background-color: #b71c1c;
     -webkit-transition: width 0.3s linear;
     -moz-transition: width 0.3s linear;
     -o-transition: width 0.3s linear;
@@ -3292,7 +3292,7 @@ nav ul a span.badge {
 }
 
 .progress .indeterminate {
-    background-color: #ff4081
+    background-color: #b71c1c
 }
 
 .progress .indeterminate:before {
@@ -7953,7 +7953,7 @@ nav .input-field label.active {
 }
 
 .tabs .tab.disabled a {
-    color: #3be9ff;
+    color: #ffebee;
     cursor: default
 }
 
