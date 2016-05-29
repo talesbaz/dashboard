@@ -25,6 +25,12 @@ function adicionarEvento( local, tipo ){
 		rowAtletaEventoObservacaoSize = 's6';
 	}
 
+	if( tipo == 'substituicao' ){
+
+		rowAtletaEventoSize 	      = 's4';
+		rowAtletaEventoMinutoSize     = 's3';
+	}
+
 	var oRow = $("<div></div>");
 	oRow.attr("class", "row");
 
@@ -55,12 +61,36 @@ function adicionarEvento( local, tipo ){
 	oRowMinutoEvento.append(oInputMinutos);
 	oRowMinutoEvento.append("<label for='"+iIdentificador+"'>Minutos</label>");
 
+	if( tipo == 'substituicao' ){
+
+		var oRowAtletaIconeSubstituido = $("<div><img src='images/substituicao.png' style='margin-top:20px;'/></div>");
+		oRowAtletaIconeSubstituido.attr("class", "input-field col s1 center" );
+
+		var oRowAtletaSubstituido = $("<div></div>");
+		oRowAtletaSubstituido.attr("class", "input-field col " + rowAtletaEventoSize);
+
+		var iIdentificador = Math.random();
+		var oSelectAtleta  = $("<select></select>");
+		oSelectAtleta.append( "<option disabled selected>Atleta</option>" );
+		var aOptionsAtleta = aAtletasHome;
+		if( local == 'away'){
+			aOptionsAtleta = aAtletasAway;
+		}
+		$.each(aOptionsAtleta, function( iIndex, oAtleta ){
+	    	oSelectAtleta.append( "<option>" + oAtleta.nome + "</option>" );
+	    });
+
+		oRowAtletaSubstituido.append(oSelectAtleta);
+		oRow.append(oRowAtletaIconeSubstituido);
+		oRow.append(oRowAtletaSubstituido);
+	}
+
 	oRow.append(oRowMinutoEvento);
 
 	/**
 	 * Monta Observacao
 	 */
-	if( tipo != 'gol' ){
+	if( tipo != 'gol' && tipo != 'substituicao'){
 
 		var iIdentificador = Math.random();
 		var oRowObervacaoEvento = $("<div></div>");
@@ -78,10 +108,22 @@ function adicionarEvento( local, tipo ){
 	switch( tipo ) {
 
 	    case 'gol':
+
 			$( oRow ).insertAfter( "#gols_" + local );
+
+			/**
+			 * Atualiza saldo de gols
+			 */
+			var iSaldo = parseInt($("#resultado_" + local ).html());
+			iSaldo++;
+			$("#resultado_" + local ).html(iSaldo);
+
 	        break;
 	    case 'amarelo':
 			$( oRow ).insertAfter( "#amarelos_" + local );
+	        break;
+	    case 'substituicao':
+			$( oRow ).insertAfter( "#substituicao_" + local );
 	        break;
 	    default:
 			$( oRow ).insertAfter( "#vermelhos_" + local );
@@ -247,9 +289,9 @@ $('#enviar').click(function() {
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
 
-		var regra = /^[0-9]+$/; 
+		var regra = /^[0-9]+$/;
 
-		if (atleta.nome.match(regra)) { 
+		if (atleta.nome.match(regra)) {
 			continue;
 		}
 
@@ -258,7 +300,7 @@ $('#enviar').click(function() {
 			if (value == atleta.nome) {
 
 				alert('Jogador ' + value + ', do time da casa foi selecionado mais de uma vez para essa partida.');
-				
+
 				lParaExecucao = true;
 
 			}
@@ -290,9 +332,9 @@ $('#enviar').click(function() {
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
 
-		var regra = /^[0-9]+$/; 
+		var regra = /^[0-9]+$/;
 
-		if (atleta.nome.match(regra)) { 
+		if (atleta.nome.match(regra)) {
 			continue;
 		}
 
@@ -325,9 +367,9 @@ $('#enviar').click(function() {
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
 
-		var regra = /^[0-9]+$/; 
+		var regra = /^[0-9]+$/;
 
-		if (atleta.nome.match(regra)) { 
+		if (atleta.nome.match(regra)) {
 			continue;
 		}
 
@@ -338,7 +380,7 @@ $('#enviar').click(function() {
 				lParaExecucao = true;
 				return false;
 			}
-	
+
 		});
 
 		nomes_away.push(atleta.nome);
@@ -367,9 +409,9 @@ $('#enviar').click(function() {
 		atleta.nome     = jogador.innerHTML.replace('<span>', '');
 		atleta.nome     = atleta.nome.replace('</span>', '');
 
-		var regra = /^[0-9]+$/; 
+		var regra = /^[0-9]+$/;
 
-		if (atleta.nome.match(regra)) { 
+		if (atleta.nome.match(regra)) {
 			continue;
 		}
 
@@ -379,7 +421,7 @@ $('#enviar').click(function() {
 			if (value == atleta.nome) {
 				alert('Jogador ' + value + ', do time visitante foi selecionado mais de uma vez para essa partida.');
 				lParaExecucao = true;
-				
+
 			}
 
 		});
