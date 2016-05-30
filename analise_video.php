@@ -26,8 +26,9 @@
   	  <div class="col s12">
   	    <div class="card-panel center">
   	      <div class="video-container">
-			<video data-html5-video="" src="https://voddownload02.video.globo.com/v0/0f/fb/1e/4864115_1e55e0c2b30e717010d9f732382cf82f633c3a4c/4864115-web360.mp4?h=0502146454761755949244471464551217392400602219hoOZlKItHjHY3GdxuoMUQ&amp;k=html5" preload="metadata" controls>
-			<source src="https://voddownload02.video.globo.com/v0/0f/fb/1e/4864115_1e55e0c2b30e717010d9f732382cf82f633c3a4c/4864115-web360.mp4?h=0502146454761755949244471464551217392400602219hoOZlKItHjHY3GdxuoMUQ&amp;k=html5" type="video/mp4">
+              <video data-html5-video="" src="https://voddownload02.video.globo.com/v0/0f/fb/1e/4864115_1e55e0c2b30e717010d9f732382cf82f633c3a4c/4864115-web360.mp4?h=050214645721342680162540146457573484618086851aOGyL0eT38j97BhO2An4xA&amp;k=html5" preload="metadata" controls>
+              <source src="https://voddownload02.video.globo.com/v0/0f/fb/1e/4864115_1e55e0c2b30e717010d9f732382cf82f633c3a4c/4864115-web360.mp4?h=050214645721342680162540146457573484618086851aOGyL0eT38j97BhO2An4xA&amp;k=html5" type="video/mp4">
+          </div>
   	    </div>
   	  </div>
   	</div>
