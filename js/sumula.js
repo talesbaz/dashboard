@@ -277,8 +277,7 @@ $('#enviar').click(function() {
 	var nomes_away = new Array();
 	var lParaExecucao = false;
 
-	var aSelecionados = $('#atletas_home_titulares li[class="active selected"]');
-
+	var aSelecionados = $.merge($('#atletas_home_titulares li[class="active selected"]'), $('#atletas_home_titulares li[class="active"]'));
 	for (var i = 0; i < aSelecionados.length; i++) {
 
 		jogador = aSelecionados[i];
@@ -322,7 +321,7 @@ $('#enviar').click(function() {
 		return false;
 	}
 
-	var aSelecionados = $('#atletas_home_reservas li[class="active selected"]');
+	var aSelecionados = $.merge($('#atletas_home_reservas li[class="active selected"]'), $('#atletas_home_reservas li[class="active"]'));
 	for (var i = 0; i < aSelecionados.length; i++) {
 
 		jogador = aSelecionados[i];
@@ -357,7 +356,7 @@ $('#enviar').click(function() {
     	return false;
     }
 
-    aSelecionados = $('#atletas_away_titulares li[class="active selected"]');
+    var aSelecionados = $.merge($('#atletas_away_titulares li[class="active selected"]'), $('#atletas_away_titulares li[class="active"]'));
 	for(var i=0;i<aSelecionados.length; i++) {
 
 		jogador = aSelecionados[i];
@@ -398,8 +397,8 @@ $('#enviar').click(function() {
 		return false;
 	}
 
-	aSelecionados = $('#atletas_away_reservas li[class="active selected"]');
-    for(var i=0; i<aSelecionados.length;i++) {
+	var aSelecionados = $.merge($('#atletas_away_reservas li[class="active selected"]'), $('#atletas_away_reservas li[class="active"]'));
+	for(var i=0; i<aSelecionados.length;i++) {
 
     	jogador = aSelecionados[i];
 
