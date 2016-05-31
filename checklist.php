@@ -187,8 +187,7 @@
   <script type="text/javascript" src="js/checklist.js" defer></script>
   <div class="row">
         <div class="col s12">
-            <!--onclick="location.href='dashboard.php?c=pre_sumula'" -->
-            <button id="enviar" class="btn red darken-4 waves-effect waves-light right" style="margin-left: 10px">Enviar <i class="mdi-content-send right"></i></button>
+            <button id="enviar" class="btn red darken-4 waves-effect waves-light right" style="margin-left: 10px" onclick="location.href='dashboard.php?c=pre_sumula'">Enviar <i class="mdi-content-send right"></i></button>
             <button class="btn red darken-4 waves-effect waves-light right" onclick="return false;">Verificar <i class="mdi-image-camera-alt right"></i></button>
         </div>
     </div>
