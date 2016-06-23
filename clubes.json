@@ -2,7 +2,7 @@
    "internacional":[
       {
          "foto":"http://www.internacional.com.br/jogadorescolorados/foto/DaniloFernandes_GRUPO2016.jpg",
-         "nome":"Danilo Fernandes ",
+         "nome":"Danilo Fernandes",
          "numero":"1",
          "posicao":"Goleiro"
       },
@@ -34,11 +34,13 @@
          "foto":"http://www.internacional.com.br/jogadorescolorados/foto/Ernando_GRUPO2016.jpg",
          "nome":"Ernando",
          "numero":"14",
+         "selected":true,
          "posicao":"Zagueiros"
       },
       {
          "foto":"http://www.internacional.com.br/jogadorescolorados/foto/Paulao_GRUPO2016.jpg",
          "nome":"Paulão",
+         "selected":true,
          "numero":"25",
          "posicao":"Zagueiros"
       },
@@ -388,7 +390,7 @@
       },
       {
          "foto":"http://www.gremio.net/upload/player/img_8021 (1)_g.jpg",
-         "nome":"Miller",
+         "nome":"Miller Bollaños",
          "numero":"7",
          "posicao":"Atacantes"
       },

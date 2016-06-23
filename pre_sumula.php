@@ -86,6 +86,47 @@
       </div>
 
     </div>
+    <ul style="display:none" id="rta_atletas_home_titulares">
+      <li><span>Danilo Fernandes</span></li>
+      <li><span>William</span></li>
+      <li><span>Paulão</span></li>
+      <li><span>Ernando</span></li>
+      <li><span>Artur</span></li>
+      <li><span>Rodrigo Dourado</span></li>
+      <li><span>Fabinho</span></li>
+      <li><span>Vitinho</span></li>
+      <li><span>Andrigo</span></li>
+    </ul>
+    <ul style="display:none" id="rta_atletas_home_reservas">
+      <li><span>Muriel</span></li>
+      <li><span>Geferson</span></li>
+      <li><span>Eduardo Sasha</span></li>
+      <li><span>Alisson Farias</span></li>
+      <li><span>Anselmo</span></li>
+      <li><span>Bertotto</span></li>
+      <li><span>Fernando Bob</span></li>
+    </ul>
+    <ul style="display:none" id="rta_atletas_away_titulares">
+      <li><span>Marcelo Grohe</span></li>
+      <li><span>Wesley</span></li>
+      <li><span>Geromel</span></li>
+      <li><span>Fred</span></li>
+      <li><span>Marcelo Oliveira</span></li>
+      <li><span>Edinho</span></li>
+      <li><span>Maicon</span></li>
+      <li><span>Giuliano</span></li>
+      <li><span>Everton</span></li>
+    </ul>
+
+    <ul style="display:none" id="rta_atletas_away_reservas">
+      <li><span>Leo</span></li>
+      <li><span>Bressan</span></li>
+      <li><span>Marcelo Hermes</span></li>
+      <li><span>Ramiro</span></li>
+      <li><span>Douglas</span></li>
+      <li><span>Miller Bollaños</span></li>
+      <li><span>Henrique Almeida</span></li>
+    </ul>
     <script type="text/javascript" src="js/sumula.js" defer></script>
 
     <div class="row">
